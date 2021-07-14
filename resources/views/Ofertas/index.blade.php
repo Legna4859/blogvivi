@@ -192,7 +192,7 @@
     @foreach ($Ofertas as $Oferta)
         <tr>
             <td style="font-size: 19pt">{{$loop->iteration}}</td>
-            <td style="font-size: 19pt">{{$Oferta->tipo}}</td>
+            <td style="font-size: 19pt">{{$Oferta->oferta}}</td>
             <td style="font-size: 19pt">{{$Oferta->correo}}</td>
             <td style="font-size: 19pt">{{$Oferta->nombre}}</td>
             <td align="center">

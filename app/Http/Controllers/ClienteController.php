@@ -44,16 +44,16 @@ class ClienteController extends Controller
     public function store(Request $request,Cliente $cliente)
     {
         $request->validate([
-        'correo' =>'required',
-        'domicilio'=>'required',
-        'direccion'=>'required',
-        'ciudad'=>'required',
+        'correo' =>'string|required',
+        'domicilio'=>'string|required',
+        'direccion'=>'string|required',
+        'ciudad'=>'string|required',
         ]);
 
-        $cliente->correo = $request->correo;
-        $cliente->domicilio = $request->domicilio;
-        $cliente->direccion=$request->direccion;
-        $cliente->id_municipio=$request->ciudad;
+        $cliente->correo = $request->input('correo');
+        $cliente->domicilio = $request->input('domicilio');
+        $cliente->direccion=$request->input('direccion');
+        $cliente->id_municipio=$request->input('ciudad');
         $cliente->save();
 
         return redirect()->route('Cliente.index')
@@ -79,11 +79,8 @@ class ClienteController extends Controller
      */
     public function edit($id_cliente)
     {
-        $cliente=Cliente::findorFail($id_cliente);
-        $municipio=Municipio::join('clientes','municipios.id_municipio','=','clientes.id_municipio')
-        ->select('clientes.correo','clientes.domicilio','clientes.direccion','municipios.municipio')
-        ->where('clientes.id_cliente',$id_cliente)
-        ->get();
+        $cliente = Cliente::where('id_cliente',$id_cliente)->first();
+        $municipio = Municipio::all();
         return view("Cliente.edit",compact('cliente','municipio'));
     }
 
@@ -94,17 +91,18 @@ class ClienteController extends Controller
      * @param  \App\Models\Cliente  $clientes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Cliente $cliente)
+    public function update(Request $request,$id_cliente)
     {
         $request->validate([
-            'correo' =>'required',
-            'domicilio'=>'required',
-            'direccion'=>'required',
+            'correo' =>'string|required',
+            'domicilio'=>'string|required',
+            'direccion'=>'string|required',
             'ciudad'=>'required',
             ]);
 
-            $cliente->correo=$request->input('correo');
-            $cliente->domicilio=$request->input('domicilio');
+            $cliente = Cliente::where('id_cliente',$id_cliente)->first();
+            $cliente->correo = $request->input('correo');
+            $cliente->domicilio = $request->input('domicilio');
             $cliente->direccion=$request->input('direccion');
             $cliente->id_municipio=$request->input('ciudad');
             $cliente->save();

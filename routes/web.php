@@ -17,14 +17,12 @@ use App\Http\Controllers\ProductoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Boutique_vivi.index');
 });
 Route::get('Practica', function () {
     return view('Practica.practica');
 });
-Route::get('Boutique_vivi', function () {
-    return view('Boutique_vivi.index');
-});
+
 Route::get('Cliente', function () {
     return view('Cliente.index');
 });

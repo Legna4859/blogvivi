@@ -56,7 +56,7 @@
             <div class="col-xs-12 col-sm-8 col-md-8">
                 <div class="form-group">
                     <strong style="font-size: 19pt">Tipo:</strong>
-                    <input type="text" name="tipo" class="form-control" style="font-size: 19pt">
+                    <input type="text" name="oferta" class="form-control" style="font-size: 19pt">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

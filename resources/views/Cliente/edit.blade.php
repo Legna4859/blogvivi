@@ -57,7 +57,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong style="font-size: 19pt">Correo Electronico:</strong>
-                    <input type="email" name="correo" class="form-control" placeholder="correo electronico"
+                    <input type="email" name="correo" class="form-control" required placeholder="correo electronico"
                            style="font-size: 19pt" value="{{$cliente->correo}}">
                 </div>
             </div>
@@ -65,13 +65,13 @@
                 <div class="form-group">
                     <strong style="font-size: 19pt">Domicilio:</strong>
                     <input class="form-control" name="domicilio"
-                        placeholder="domicilio" style="font-size: 19pt" value="{{$cliente->domicilio}}">
+                        placeholder="domicilio" style="font-size: 19pt" required value="{{$cliente->domicilio}}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong style="font-size: 19pt">Direccion:</strong>
-                    <input type="text" name="direccion" class="form-control" placeholder="direccion"
+                    <input type="text" name="direccion" class="form-control" required placeholder="direccion"
                            style="font-size: 19pt" value="{{$cliente->direccion}}">
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <strong style="font-size: 19pt">Ciudad:</strong>
                     <select class="form-control" name="ciudad">
                         @foreach($municipio as $mun)
-                            <option value="{{$mun->municipio}}">{{$mun->municipio}}</option>
+                            <option required value="{{$mun->id_municipio}}">{{ $mun->municipio }}</option>
                         @endforeach
                     </select>
                 </div>

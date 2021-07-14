@@ -58,7 +58,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong style="font-size: 19pt">Tipo:</strong>
-                    <input type="text" name="tipo" class="form-control"  placeholder="tipo" style="font-size: 19pt" value="{{$Ofertas->tipo}}">
+                    <input type="text" name="oferta" class="form-control"  placeholder="tipo" style="font-size: 19pt" value="{{$Ofertas->oferta}}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

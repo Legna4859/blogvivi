@@ -17,7 +17,7 @@ class OfertaController extends Controller
      */
     public function index()
     {
-        $Ofertas=DB::select('SELECT o.id_oferta,o.tipo,c.correo,p.nombre FROM ofertas as o,clientes as c,productos as p WHERE c.id_cliente=o.id_cliente AND p.id_producto=o.id_producto');
+        $Ofertas=DB::select('SELECT o.id_oferta,o.oferta,c.correo,p.nombre FROM ofertas as o,clientes as c,productos as p WHERE c.id_cliente=o.id_cliente AND p.id_producto=o.id_producto');
         return view("Ofertas.index",compact('Ofertas'));
     }
 
@@ -39,16 +39,15 @@ class OfertaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$id_oferta)
+    public function store(Request $request,Oferta $Ofertas)
     {
         $request->validate([
-            'tipo'=>'required',
+            'oferta'=>'required',
             'correo'=>'required',
             'producto'=>'required',
         ]);
 
-        $Ofertas = Oferta::findorFail($id_oferta);
-        $Ofertas->tipo=$request->input('tipo');
+        $Ofertas->oferta=$request->input('oferta');
         $Ofertas->id_cliente=$request->input('correo');
         $Ofertas->id_producto=$request->input('producto');
         $Ofertas->save();
@@ -76,15 +75,9 @@ class OfertaController extends Controller
      */
     public function edit($id_oferta)
     {
-        $Ofertas=Oferta::findorFail($id_oferta);
-        $Clientes=Cliente::join('ofertas','clientes.id_cliente','=','ofertas.id_cliente')
-        ->select('ofertas.tipo','clientes.correo')
-        ->where('ofertas.id_oferta',$id_oferta)
-        ->get();
-        $Productos=Producto::join('ofertas','productos.id_producto','=','ofertas.id_producto')
-        ->select('ofertas.tipo','productos.nombre')
-        ->where('ofertas.id_oferta',$id_oferta)
-        ->get();
+        $Ofertas = Oferta::where('id_oferta',$id_oferta)->first();
+        $Clientes = Cliente::all();
+        $Productos = Producto::all();
         return view("Ofertas.edit",compact("Ofertas","Clientes","Productos"));
     }
 
@@ -95,15 +88,16 @@ class OfertaController extends Controller
      * @param  \App\Models\Oferta  $Ofertas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Oferta $Ofertas)
+    public function update(Request $request,$id_oferta)
     {
         $request->validate([
-            'tipo'=>'required',
+            'oferta'=>'required',
             'correo'=>'required',
             'producto'=>'required',
         ]);
 
-        $Ofertas->tipo=$request->input('tipo');
+        $Ofertas = Oferta::where('id_oferta',$id_oferta)->first();
+        $Ofertas->oferta=$request->input('oferta');
         $Ofertas->id_cliente=$request->input('correo');
         $Ofertas->id_producto=$request->input('producto');
         $Ofertas->save();
