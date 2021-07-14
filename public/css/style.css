@@ -1,0 +1,45 @@
+theme-menu-one{
+padding-top: 45px;
+}
+navbar-nav{
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+padding-left: 1em;
+margin-bottom: 0.5em;
+list-style: none;
+}
+
+a.nav-link {
+color: rgb(255, 50, 70);
+font-family: "CircularStd-book";
+font-size: 20px;
+}
+a.nav-link.dropdown-toggle{	
+color: rgb(100, 105, 122);	
+text-decoration: none;
+background-color: transparent;
+-webkit-text-decoration-skip: objects;
+}
+li.call-us{
+color: rgb(100, 105, 122);
+font-family: "CircularStd-book";
+font-size: 20px;
+text-decoration: none;
+background-color: transparent;
+-webkit-text-decoration-skip: objects;
+}
+a.li.telefone{
+color: rgb(255, 50, 70);
+font-family: "CircularStd-book";
+font-size: 20px;	
+}
+
+h1{
+font-family: "CircularStd-book";	
+}
+p{
+font-family: "CircularStd-book";
+font-size: 20px;
+}

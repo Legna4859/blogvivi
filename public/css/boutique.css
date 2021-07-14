@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Mandera Studio_PersonalUseOnly.ttf';
+    src: url(../fonts/Madera\ Studio_PersonalUseOnly.ttf);
+}
+
+@font-face {
+    font-family: 'evanescent.ttf';
+    src: url(../fonts/evanescent.ttf);
+}
+
+@font-face {
+    font-family: 'Handley Free';
+    src: url(../fonts/Handley\ Free.ttf);
+}
+
+@font-face {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+}
+
+@font-face {
+    font-family: 'Great\ Day\ bold\ Personal\ Use.ttf';
+    src: url(../fonts/Great\ Day\ bold\ Personal\ Use.ttf);
+}
+
+@font-face {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
+
+a.nav-link {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    text-transform: capitalize !important;
+    color: white;
+}
+
+a.material-icons {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+}
+
+a {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    text-transform: capitalize !important;
+}
+
+b {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+    font-size: 20pt;
+}
+
+p {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+    font-size: 20pt;
+}
+
+h1 {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: 25pt;
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: 19pt;
+    color: black;
+}
+
+h5 {
+    text-align: center;
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: medium;
+}
+
+h6 {
+    text-align: center;
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: medium;
+}
+
+label {
+    color: #e91e63;
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: 18pt;
+}
+
+li {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+    font-size: 20pt;
+}
+
+input {
+    color: #e91e63;
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+    font-size: 18pt;
+}
+
+button {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    text-transform: capitalize !important;
+}
+
+small {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: 19pt;
+}
+
+script {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    font-size: 15pt;
+}
+
+th {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
+
+td {
+    font-family: 'Rosetta.otf';
+    src: url(../fonts/Rosetta.otf);
+    color: darkslategrey;
+    font-size: 15pt;
+}
+
+strong {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
+
+textarea {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
+
+option {
+    font-family: 'Darleston.otf';
+    src: url(../fonts/Darleston.otf);
+}
